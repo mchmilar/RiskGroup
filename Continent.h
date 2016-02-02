@@ -1,0 +1,37 @@
+#ifndef CONTINENT_H
+#define CONTINENT_H
+
+//#include "Territory.h"
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+/*
+Continent objects are created in the Map class. These can contain any number of Territory objects
+and ownership of an entire continent provides bonus army regeneration for a player.
+*/
+class Continent
+{
+private:
+	std::string name; //name of the continent
+	int integerValue; //an int value to be associated with the continent
+	int numberOfTerritories; //number of territories within that continent
+	int continentIntId;//unique identifier
+public:
+	Continent();
+	Continent(std::string, int);
+	int getNumOfArmies();
+	void setNumOfArmies(int numOfArmies);
+	//Continent(const Continent &p);
+	int getIntegerValue();
+	void setContinent(std::string, int);
+	void setNumberOfTerritories(int);
+	int getNumberOfTerritories();
+	void setContinentIntId(int);
+	int getContinentIntId();
+	~Continent();
+	std::string getName();
+};
+
+#endif
